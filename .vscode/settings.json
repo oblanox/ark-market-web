@@ -1,0 +1,9 @@
+{
+  "php.validate.executablePath": "/usr/bin/php8.3",
+  "editor.formatOnSave": true,
+  "intelephense.environment.phpVersion": "8.3.0",
+  "intelephense.files.exclude": [
+    "**/vendor/**",
+    "**/.vscode/**"
+  ]
+}
