@@ -14,4 +14,13 @@ class Config
     public const TYPE_DINO = 'dino';
     public const TYPE_ITEM = 'item';
     public const TYPE_SERVICE = 'service';
+
+    public const QUALITY_LABELS  = [
+        'Primitive'    => 'Примитивное',
+        'Ramshackle'   => 'Хлипкое',
+        'Apprentice'   => 'Ученическое',
+        'Journeyman'   => 'Подмастерье',
+        'Mastercraft'  => 'Мастерское',
+        'Ascendant'    => 'Высшее'
+    ];
 }

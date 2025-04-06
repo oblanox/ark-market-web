@@ -26,7 +26,7 @@ $balance = $isLoggedIn ? Wallet::getBalance() : 0;
                         Товары
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                        <li><a class="dropdown-item" href="#">Предметы</a></li>
+                        <li><a class="dropdown-item" href="/items.php">Предметы</a></li>
                         <li><a class="dropdown-item" href="/dino.php">Дино</a></li>
                         <li><a class="dropdown-item" href="#">Услуги</a></li>
                     </ul>

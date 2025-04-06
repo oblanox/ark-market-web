@@ -6,6 +6,7 @@ use App\Config\Config;
 
 $pdo = getDb();
 $dinoModel = new Dino($pdo);
+$user = $_SESSION['user'] ?? [];
 $dinosaurs = $dinoModel->getVisibleForUser($user);
 ?>
 <h2 class="mb-4">Доступные динозавры</h2>
@@ -22,19 +23,55 @@ $dinosaurs = $dinoModel->getVisibleForUser($user);
                     <p class="card-text">Цена: <?= $dino['Price'] ?> арков</p>
                     <p class="card-text"><code>/buy dino <?= htmlspecialchars($dino['ShortCode']) ?></code></p>
 
-                    <form action="/add-to-cart.php" method="post" class="mt-3">
+                    <form method="post" action="/add-to-cart.php">
                         <input type="hidden" name="id" value="<?= $dino['id'] ?>">
                         <input type="hidden" name="type" value="dino">
                         <input type="hidden" name="name" value="<?= htmlspecialchars($dino['NameRU']) ?>">
                         <input type="hidden" name="image" value="<?= htmlspecialchars($dino['Pic']) ?>">
                         <input type="hidden" name="price" value="<?= $dino['Price'] ?>">
-                        <input type="hidden" name="params" value="Уровень:<?= $dino['Level'] ?><?= $dino['NoSex'] ? '|Кастрат:Да' : '' ?>">
+                        <?php $dino_level = $dino['Level'] == "0" ?  223 : $dino['Level']; ?>
+                        <input type="hidden" name="level" value="<?= $dino_level ?>">
 
-                        <div class="input-group">
-                            <input type="number" name="qty" class="form-control" value="1" min="1">
-                            <button type="submit" class="btn btn-success">В корзину</button>
+                        <div class="form-check mb-1">
+                            <input class="form-check-input" type="checkbox" name="xp" id="xp_<?= $dino['id'] ?>">
+                            <label class="form-check-label" for="xp_<?= $dino['id'] ?>">С максимумом опыта</label>
                         </div>
+
+                        <?php if (!$dino['NoSex']): ?>
+                            <div class="mb-2">
+                                <label class="form-label mb-1">Пол:</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" value="random" checked id="g_r_<?= $dino['id'] ?>">
+                                    <label class="form-check-label" for="g_r_<?= $dino['id'] ?>">Рандом</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" value="female" id="g_f_<?= $dino['id'] ?>">
+                                    <label class="form-check-label" for="g_f_<?= $dino['id'] ?>">Девочка</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" value="male" id="g_m_<?= $dino['id'] ?>">
+                                    <label class="form-check-label" for="g_m_<?= $dino['id'] ?>">Мальчик</label>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if ($dino['NoSex']): ?>
+                            <input type="hidden" name="gender" value="nosex">
+                        <?php endif; ?>
+
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" name="neutered" id="neut_<?= $dino['id'] ?>" <?= $dino['NoSex'] ? 'checked disabled' : '' ?>>
+                            <label class="form-check-label" for="neut_<?= $dino['id'] ?>">Кастрат</label>
+                        </div>
+
+                        <div class="input-group mb-2">
+                            <span class="input-group-text">Кол-во</span>
+                            <input type="number" class="form-control" name="count" value="1" min="1">
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100">➕ В корзину</button>
                     </form>
+
                     <?php
                     if ($user['SteamId'] == Config::ADMIN_STEAM_ID): ?>
                         <div class="text-end mt-2">
