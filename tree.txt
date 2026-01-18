@@ -1,0 +1,1493 @@
+.
+├── composer.json
+├── composer.lock
+├── config
+│   └── db.php
+├── public
+│   ├── add-to-cart.php
+│   ├── assets
+│   │   └── js
+│   │       └── Search.js
+│   ├── cart.php
+│   ├── checkout.php
+│   ├── demo.html
+│   ├── dino.php
+│   ├── edit-dino.php
+│   ├── edit-item.php
+│   ├── footer.php
+│   ├── geo.php
+│   ├── header.php
+│   ├── index.php
+│   ├── info.php
+│   ├── items.php
+│   ├── layout.php
+│   ├── login.php
+│   ├── logout.php
+│   ├── order.php
+│   ├── pages
+│   │   ├── cart.php
+│   │   ├── change-password.php
+│   │   ├── checkout.php
+│   │   ├── dino-list.php
+│   │   ├── edit-dino.php
+│   │   ├── edit-item.php
+│   │   ├── home.php
+│   │   ├── item-list.php
+│   │   ├── login.php
+│   │   ├── my-order.php
+│   │   ├── profile.php
+│   │   ├── register.php
+│   │   └── wallet-tupup.php
+│   ├── password.php
+│   ├── profile.php
+│   ├── register-user.php
+│   ├── remove-from-cart.php
+│   ├── upl
+│   │   ├── consumables
+│   │   │   ├── Aggeravic_Mushroom_Aberration.png
+│   │   │   ├── Allosaurus_Egg.png
+│   │   │   ├── Amarberry.png
+│   │   │   ├── Amarberry_Seed.png
+│   │   │   ├── Ankylo_Egg.png
+│   │   │   ├── Aquatic_Mushroom_Aberration.png
+│   │   │   ├── Archaeopteryx_Egg.png
+│   │   │   ├── Argentavis_Egg.png
+│   │   │   ├── Ascerbic_Mushroom_Aberration.png
+│   │   │   ├── Auric_Mushroom_Aberration.png
+│   │   │   ├── Azulberry.png
+│   │   │   ├── Azulberry_Seed.png
+│   │   │   ├── Baked_Bread_Loaf_Primitive_Plus.png
+│   │   │   ├── Barley_Seed_Primitive_Plus.png
+│   │   │   ├── Baryonyx_Egg.png
+│   │   │   ├── Basic_Kibble.png
+│   │   │   ├── Battle_Tartare.png
+│   │   │   ├── Beer_Liquid.png
+│   │   │   ├── Berries.png
+│   │   │   ├── Bio_Toxin.png
+│   │   │   ├── Birthday_Cake.png
+│   │   │   ├── Biscuit_Primitive_Plus.png
+│   │   │   ├── Bloodstalker_Egg_Genesis_Part_1.png
+│   │   │   ├── Broth_of_Enlightenment.png
+│   │   │   ├── Broth_Primitive_Plus.png
+│   │   │   ├── Bug_Repellant.png
+│   │   │   ├── Cactus_Broth_Scorched_Earth.png
+│   │   │   ├── Cactus_Sap_Scorched_Earth.png
+│   │   │   ├── Cake_Batter_Primitive_Plus.png
+│   │   │   ├── Camelsaurus_Egg_Scorched_Earth.png
+│   │   │   ├── Carno_Egg.png
+│   │   │   ├── Cashew_Milk_Primitive_Plus.png
+│   │   │   ├── Cashew_Primitive_Plus.png
+│   │   │   ├── Cigarette_Primitive_Plus.png
+│   │   │   ├── Citronal.png
+│   │   │   ├── Citronal_Seed.png
+│   │   │   ├── Coffee_Seed_Primitive_Plus.png
+│   │   │   ├── Compy_Egg.png
+│   │   │   ├── Cooked_Bacon_Primitive_Plus.png
+│   │   │   ├── Cooked_Fish_Meat.png
+│   │   │   ├── Cooked_Lamb_Chop.png
+│   │   │   ├── Cooked_Meat_Jerky.png
+│   │   │   ├── Cooked_Meat.png
+│   │   │   ├── Cooked_Prime_Fish_Meat.png
+│   │   │   ├── Cooked_Prime_Meat.png
+│   │   │   ├── Corn_Starch_Primitive_Plus.png
+│   │   │   ├── Corrupted_Nodule_Extinction.png
+│   │   │   ├── Cup_of_Coffee_Primitive_Plus.png
+│   │   │   ├── Cup_of_Tea_Primitive_Plus.png
+│   │   │   ├── Cured_Bacon_Primitive_Plus.png
+│   │   │   ├── Custom_Consumable.png
+│   │   │   ├── Deathworm_Horn_Scorched_Earth.png
+│   │   │   ├── Deinonychus_Egg_Valguero.png
+│   │   │   ├── Dilo_Egg.png
+│   │   │   ├── Dimetrodon_Egg.png
+│   │   │   ├── Dimorph_Egg.png
+│   │   │   ├── Diplo_Egg.png
+│   │   │   ├── Dodo_Egg.png
+│   │   │   ├── Dried_Barley_Primitive_Plus.png
+│   │   │   ├── Dried_Rice_Primitive_Plus.png
+│   │   │   ├── Dried_Tobacco_Primitive_Plus.png
+│   │   │   ├── Eggs.png
+│   │   │   ├── Enduro_Stew.png
+│   │   │   ├── Exceptional_Kibble.png
+│   │   │   ├── Extraordinary_Kibble.png
+│   │   │   ├── Featherlight_Egg_Aberration.png
+│   │   │   ├── Feces.png
+│   │   │   ├── Festive_Dino_Candy_Easter.png
+│   │   │   ├── Festive_Dino_Candy.png
+│   │   │   ├── Focal_Chili.png
+│   │   │   ├── Food.png
+│   │   │   ├── Fresh_Bacon_Primitive_Plus.png
+│   │   │   ├── Fresh_Barley_Primitive_Plus.png
+│   │   │   ├── Fresh_Coffee_Fruit_Primitive_Plus.png
+│   │   │   ├── Fresh_Rice_Primitive_Plus.png
+│   │   │   ├── Fresh_Sorghum_Primitive_Plus.png
+│   │   │   ├── Fresh_Spinach_Primitive_Plus.png
+│   │   │   ├── Fresh_Sugar_Plant_Primitive_Plus.png
+│   │   │   ├── Fresh_Tea_Leaves_Primitive_Plus.png
+│   │   │   ├── Fresh_Tobacco_Primitive_Plus.png
+│   │   │   ├── Fresh_Wheat_Primitive_Plus.png
+│   │   │   ├── Gallimimus_Egg.png
+│   │   │   ├── Giant_Bee_Honey.png
+│   │   │   ├── Giganotosaurus_Egg.png
+│   │   │   ├── Glowtail_Egg_Aberration.png
+│   │   │   ├── Golden_Hesperornis_Egg.png
+│   │   │   ├── Grapes_Primitive_Plus.png
+│   │   │   ├── Hesperornis_Egg.png
+│   │   │   ├── Human_Feces.png
+│   │   │   ├── Jam_of_Amarberry_Primitive_Plus.png
+│   │   │   ├── Jam_of_Azulberry_Primitive_Plus.png
+│   │   │   ├── Jam_of_Mejoberry_Primitive_Plus.png
+│   │   │   ├── Jam_of_Tintoberry_Primitive_Plus.png
+│   │   │   ├── Kairuku_Egg.png
+│   │   │   ├── Kaprosuchus_Egg.png
+│   │   │   ├── Kibble.png
+│   │   │   ├── Lazarus_Chowder.png
+│   │   │   ├── Lesser_Antidote.png
+│   │   │   ├── Lettuce_Primitive_Plus.png
+│   │   │   ├── Lettuce_Seed_Primitive_Plus.png
+│   │   │   ├── Logo_Mobile.svg
+│   │   │   ├── Longrass.png
+│   │   │   ├── Longrass_Seed.png
+│   │   │   ├── Medical_Brew.png
+│   │   │   ├── Megalosaurus_Egg.png
+│   │   │   ├── Mejoberry.png
+│   │   │   ├── Mejoberry_Seed.png
+│   │   │   ├── Microraptor_Egg.png
+│   │   │   ├── Mindwipe_Tonic.png
+│   │   │   ├── Mushroom_Brew_Aberration.png
+│   │   │   ├── Nameless_Venom_Aberration.png
+│   │   │   ├── Narcoberry.png
+│   │   │   ├── Narcoberry_Seed.png
+│   │   │   ├── Narcotic.png
+│   │   │   ├── Nirvana_Tonic_Mobile.png
+│   │   │   ├── Note.png
+│   │   │   ├── Organic_Polymer.png
+│   │   │   ├── Oviraptor_Egg.png
+│   │   │   ├── Pachycephalosaurus_Egg.png
+│   │   │   ├── Pancake_Batter_Primitive_Plus.png
+│   │   │   ├── Parasaur_Egg.png
+│   │   │   ├── Pegomastax_Egg.png
+│   │   │   ├── Plant_Species_X_Seed.png
+│   │   │   ├── Prime_Meat_Jerky.png
+│   │   │   ├── Pteranodon_Egg.png
+│   │   │   ├── Raptor_Egg.png
+│   │   │   ├── Rare_Flower.png
+│   │   │   ├── Rare_Mushroom.png
+│   │   │   ├── Raw_Fish_Meat.png
+│   │   │   ├── Raw_Meat.png
+│   │   │   ├── Raw_Mutton.png
+│   │   │   ├── Raw_Prime_Fish_Meat.png
+│   │   │   ├── Raw_Prime_Meat.png
+│   │   │   ├── Reaper_Pheromone_Gland_Aberration.png
+│   │   │   ├── Re-Fertilizer.png
+│   │   │   ├── Regular_Kibble.png
+│   │   │   ├── Rockarrot.png
+│   │   │   ├── Rockarrot_Seed.png
+│   │   │   ├── Rock_Drake_Egg_Aberration.png
+│   │   │   ├── Rockwell_Recipes-_Battle_Tartare.png
+│   │   │   ├── Rockwell_Recipes-_Enduro_Stew.png
+│   │   │   ├── Rockwell_Recipes-_Mindwipe_Tonic.png
+│   │   │   ├── Savoroot.png
+│   │   │   ├── Savoroot_Seed.png
+│   │   │   ├── Simple_Kibble.png
+│   │   │   ├── Sky_Coloring.png
+│   │   │   ├── Snow_Owl_Pellet_Extinction.png
+│   │   │   ├── Soap.png
+│   │   │   ├── Sorghum_Seed_Primitive_Plus.png
+│   │   │   ├── Soybean_Primitive_Plus.png
+│   │   │   ├── Soybean_Seed_Primitive_Plus.png
+│   │   │   ├── Spinach_Seed_Primitive_Plus.png
+│   │   │   ├── Spoiled_Meat.png
+│   │   │   ├── Stamina.png
+│   │   │   ├── Stego_Egg.png
+│   │   │   ├── Stimberry.png
+│   │   │   ├── Stimberry_Seed.png
+│   │   │   ├── Stimulant.png
+│   │   │   ├── Sugarcane_Seed_Primitive_Plus.png
+│   │   │   ├── Superior_Kibble.png
+│   │   │   ├── Sweet_Vegetable_Cake.png
+│   │   │   ├── Tek_Parasaur_Egg.png
+│   │   │   ├── Tek_Raptor_Egg.png
+│   │   │   ├── Thorny_Dragon_Egg_Scorched_Earth.png
+│   │   │   ├── Tintoberry.png
+│   │   │   ├── Tintoberry_Seed.png
+│   │   │   ├── Tobacco_Seed_Primitive_Plus.png
+│   │   │   ├── Torpidity.png
+│   │   │   ├── Trike_Egg.png
+│   │   │   ├── Turtle_Egg.png
+│   │   │   ├── Valentines_Dino_Candy.png
+│   │   │   ├── Vulture_Egg_Scorched_Earth.png
+│   │   │   ├── Water_Jar.png
+│   │   │   ├── Water.png
+│   │   │   ├── Waterskin_Empty.png
+│   │   │   └── Wyvern_Milk_Scorched_Earth.png
+│   │   ├── creature
+│   │   │   ├── achatina.png
+│   │   │   ├── allosaurus.png
+│   │   │   ├── amargasaurus.png
+│   │   │   ├── ammonite.png
+│   │   │   ├── andrewsarchus.png
+│   │   │   ├── angler.png
+│   │   │   ├── ankylosaurus.png
+│   │   │   ├── araneo.png
+│   │   │   ├── archaeopteryx.png
+│   │   │   ├── argentavis.png
+│   │   │   ├── arthropluera.png
+│   │   │   ├── astrocetus.png
+│   │   │   ├── astrodelphis.png
+│   │   │   ├── attackdrone.png
+│   │   │   ├── baryonyx.png
+│   │   │   ├── basilisk.png
+│   │   │   ├── basilosaurus.png
+│   │   │   ├── beelzebufo.png
+│   │   │   ├── beyla.png
+│   │   │   ├── beylaspawn.png
+│   │   │   ├── bladewasp.png
+│   │   │   ├── bloodstalker.png
+│   │   │   ├── brontosaurus.png
+│   │   │   ├── broodmotherlysrix.png
+│   │   │   ├── bulbdog.png
+│   │   │   ├── carbonemys.png
+│   │   │   ├── carcharodontosaurus.png
+│   │   │   ├── carnotaurus.png
+│   │   │   ├── castoroides.png
+│   │   │   ├── chalicotherium.png
+│   │   │   ├── cnidaria.png
+│   │   │   ├── coelacanth.png
+│   │   │   ├── compy.png
+│   │   │   ├── corruptedmastercontroller.png
+│   │   │   ├── crystalwyvern.png
+│   │   │   ├── crystalwyvernqueen.png
+│   │   │   ├── daeodon.png
+│   │   │   ├── deathworm.png
+│   │   │   ├── defenseunit.png
+│   │   │   ├── deinonychus.png
+│   │   │   ├── deserttitan.png
+│   │   │   ├── desmodus.png
+│   │   │   ├── dilophosaur.png
+│   │   │   ├── dimetrodon.png
+│   │   │   ├── dimorphodon.png
+│   │   │   ├── dinopithecusking.png
+│   │   │   ├── dinopithecus.png
+│   │   │   ├── diplocaulus.png
+│   │   │   ├── diplodocus.png
+│   │   │   ├── direbear.png
+│   │   │   ├── direwolf.png
+│   │   │   ├── dodo.png
+│   │   │   ├── doedicurus.png
+│   │   │   ├── dragon.png
+│   │   │   ├── dungbeetle.png
+│   │   │   ├── dunkleosteus.png
+│   │   │   ├── electrophorus.png
+│   │   │   ├── enforcer.png
+│   │   │   ├── equus.png
+│   │   │   ├── eurypterid.png
+│   │   │   ├── fasolasuchus.png
+│   │   │   ├── featherlight.png
+│   │   │   ├── fenrir.png
+│   │   │   ├── ferox.png
+│   │   │   ├── fjordhawk.png
+│   │   │   ├── foresttitan.png
+│   │   │   ├── gacha.png
+│   │   │   ├── gallimimus.png
+│   │   │   ├── gasbags.png
+│   │   │   ├── giantbee.png
+│   │   │   ├── giganotosaurus.png
+│   │   │   ├── gigantopithecus.png
+│   │   │   ├── gigantoraptor.png
+│   │   │   ├── glowbug.png
+│   │   │   ├── glowtail.png
+│   │   │   ├── griffin.png
+│   │   │   ├── hatiskoll.png
+│   │   │   ├── hesperornis.png
+│   │   │   ├── hyaenodon.png
+│   │   │   ├── icetitan.png
+│   │   │   ├── ichthyornis.png
+│   │   │   ├── ichthyosaurus.png
+│   │   │   ├── iguanodon.png
+│   │   │   ├── jerboa.png
+│   │   │   ├── jugbug.png
+│   │   │   ├── kairuku.png
+│   │   │   ├── kaprosuchus.png
+│   │   │   ├── karkinos.png
+│   │   │   ├── kentrosaurus.png
+│   │   │   ├── kingtitan.png
+│   │   │   ├── lamprey.png
+│   │   │   ├── leech.png
+│   │   │   ├── leedsichthys.png
+│   │   │   ├── liopleurodon.png
+│   │   │   ├── lymantria.png
+│   │   │   ├── lystrosaurus.png
+│   │   │   ├── maewing.png
+│   │   │   ├── magmasaur.png
+│   │   │   ├── mammoth.png
+│   │   │   ├── managarmr.png
+│   │   │   ├── manta.png
+│   │   │   ├── manticore.png
+│   │   │   ├── mantis.png
+│   │   │   ├── megachelon.png
+│   │   │   ├── megalania.png
+│   │   │   ├── megaloceros.png
+│   │   │   ├── megalodon.png
+│   │   │   ├── megalosaurus.png
+│   │   │   ├── megamek.png
+│   │   │   ├── meganeura.png
+│   │   │   ├── megapithecus.png
+│   │   │   ├── megatherium.png
+│   │   │   ├── mek.png
+│   │   │   ├── mesopithecus.png
+│   │   │   ├── microraptor.png
+│   │   │   ├── moeder.png
+│   │   │   ├── morellatops.png
+│   │   │   ├── mosasaurus.png
+│   │   │   ├── moschops.png
+│   │   │   ├── nameless.png
+│   │   │   ├── noglin.png
+│   │   │   ├── onyc.png
+│   │   │   ├── otter.png
+│   │   │   ├── overseer.png
+│   │   │   ├── oviraptor.png
+│   │   │   ├── ovis.png
+│   │   │   ├── pachy.png
+│   │   │   ├── pachyrhinosaurus.png
+│   │   │   ├── paracer.png
+│   │   │   ├── parakeetfishschool.png
+│   │   │   ├── parasaur.png
+│   │   │   ├── pegomastax.png
+│   │   │   ├── pelagornis.png
+│   │   │   ├── phiomia.png
+│   │   │   ├── phoenix.png
+│   │   │   ├── piranha.png
+│   │   │   ├── plesiosaur.png
+│   │   │   ├── procoptodon.png
+│   │   │   ├── pteranodon.png
+│   │   │   ├── pulmonoscorpius.png
+│   │   │   ├── purlovia.png
+│   │   │   ├── quetzal.png
+│   │   │   ├── raptor.png
+│   │   │   ├── ravager.png
+│   │   │   ├── reaper.png
+│   │   │   ├── rex.png
+│   │   │   ├── rhyniognatha.png
+│   │   │   ├── rockdrake.png
+│   │   │   ├── rockelemental.png
+│   │   │   ├── rockwell.png
+│   │   │   ├── rollrat.png
+│   │   │   ├── royalgriffin.png
+│   │   │   ├── sabertooth.png
+│   │   │   ├── sabertoothsalmon.png
+│   │   │   ├── sarco.png
+│   │   │   ├── scout.png
+│   │   │   ├── seeker.png
+│   │   │   ├── shadowmane.png
+│   │   │   ├── shinehorn.png
+│   │   │   ├── sinomacrops.png
+│   │   │   ├── snowowl.png
+│   │   │   ├── spinosaur.png
+│   │   │   ├── stegosaurus.png
+│   │   │   ├── steinbjorn.png
+│   │   │   ├── stryder.png
+│   │   │   ├── summoner.png
+│   │   │   ├── tapejara.png
+│   │   │   ├── terrorbird.png
+│   │   │   ├── therizinosaurus.png
+│   │   │   ├── thornydragon.png
+│   │   │   ├── thylacoleo.png
+│   │   │   ├── titanoboa.png
+│   │   │   ├── titanomyrma.png
+│   │   │   ├── titanosaur.png
+│   │   │   ├── triceratops.png
+│   │   │   ├── trilobite.png
+│   │   │   ├── troodon.png
+│   │   │   ├── tropeognathus.png
+│   │   │   ├── tusoteuthis.png
+│   │   │   ├── unicorn.png
+│   │   │   ├── velonasaur.png
+│   │   │   ├── voidwyrm.png
+│   │   │   ├── vulture.png
+│   │   │   ├── woollyrhino.png
+│   │   │   ├── wyvern.png
+│   │   │   ├── yeti.png
+│   │   │   └── yutyrannus.png
+│   │   ├── items
+│   │   │   ├── Absorbent_Substrate.png
+│   │   │   ├── Alpha_Reaper_King_Barb_Aberration.png
+│   │   │   ├── Ammonite_Bile.png
+│   │   │   ├── AnglerGel.png
+│   │   │   ├── Argentavis_Talon.png
+│   │   │   ├── Basilosaurus_Blubber.png
+│   │   │   ├── Beeswax_Primitive_Plus.png
+│   │   │   ├── Bio_Toxin.png
+│   │   │   ├── Black_Pearl.png
+│   │   │   ├── Blue_Gem_Aberration.png
+│   │   │   ├── Bread_Dough_Primitive_Plus.png
+│   │   │   ├── Brick_Primitive_Plus.png
+│   │   │   ├── Cactus_Sap_Scorched_Earth.png
+│   │   │   ├── Cane_Sugar_Primitive_Plus.png
+│   │   │   ├── Carbon_Primitive_Plus.png
+│   │   │   ├── Cementing_Paste.png
+│   │   │   ├── Charcoal.png
+│   │   │   ├── Chitin.png
+│   │   │   ├── Clay_Primitive_Plus.png
+│   │   │   ├── Clay_Scorched_Earth.png
+│   │   │   ├── Claystone_Primitive_Plus.png
+│   │   │   ├── Coal_Primitive_Plus.png
+│   │   │   ├── Congealed_Gas_Ball_Aberration.png
+│   │   │   ├── Corrupted_Nodule_Extinction.png
+│   │   │   ├── Crystal.png
+│   │   │   ├── Cup_of_Malt_Primitive_Plus.png
+│   │   │   ├── Deathworm_Horn_Scorched_Earth.png
+│   │   │   ├── Dry_Firewood_Primitive_Plus.png
+│   │   │   ├── Electronics.png
+│   │   │   ├── Element_Dust.png
+│   │   │   ├── Element.png
+│   │   │   ├── Element_Shard.png
+│   │   │   ├── Feathers_Primitive_Plus.png
+│   │   │   ├── Fiber.png
+│   │   │   ├── Flint.png
+│   │   │   ├── Fresh_Cement_Primitive_Plus.png
+│   │   │   ├── Fresh_Fat_Primitive_Plus.png
+│   │   │   ├── Fresh_Firewood_Primitive_Plus.png
+│   │   │   ├── Fungal_Wood_Aberration.png
+│   │   │   ├── Gacha_Crystal_Extinction.png
+│   │   │   ├── Gasbags_bladder_Extinction.png
+│   │   │   ├── Gasoline.png
+│   │   │   ├── Giant_Bee_Honey.png
+│   │   │   ├── Glass_Primitive_Plus.png
+│   │   │   ├── Green_Gem_Aberration.png
+│   │   │   ├── Gunpowder.png
+│   │   │   ├── Hide.png
+│   │   │   ├── Human_Hair.png
+│   │   │   ├── Keratin.png
+│   │   │   ├── Leather_Primitive_Plus.png
+│   │   │   ├── Leech_Blood.png
+│   │   │   ├── Limestone_Primitive_Plus.png
+│   │   │   ├── Lumber_Primitive_Plus.png
+│   │   │   ├── Metal_Ingot.png
+│   │   │   ├── Metal.png
+│   │   │   ├── Mistletoe.png
+│   │   │   ├── Natural_Yeast_Primitive_Plus.png
+│   │   │   ├── no-photo.png
+│   │   │   ├── Obsidian.png
+│   │   │   ├── Oil.png
+│   │   │   ├── Organic_Oil_Primitive_Plus.png
+│   │   │   ├── Organic_Polymer.png
+│   │   │   ├── Pelt.png
+│   │   │   ├── Polymer.png
+│   │   │   ├── Preserving_Salt_Scorched_Earth.png
+│   │   │   ├── Primal_Crystal_Crystal_Isles.png
+│   │   │   ├── Primitive_Plus_Icon.png
+│   │   │   ├── Propellant_Scorched_Earth.png
+│   │   │   ├── Raw_Salt_Scorched_Earth.png
+│   │   │   ├── Red_Crystalized_Sap_Extinction.png
+│   │   │   ├── Red_Gem_Aberration.png
+│   │   │   ├── Sack_of_Flour_Primitive_Plus.png
+│   │   │   ├── Sand_Scorched_Earth.png
+│   │   │   ├── Sap.png
+│   │   │   ├── Scrap_Metal_Ingot.png
+│   │   │   ├── Scrap_Metal.png
+│   │   │   ├── Shell_Fragment_Genesis_Part_1.png
+│   │   │   ├── Silica_Pearls.png
+│   │   │   ├── Silk_Scorched_Earth.png
+│   │   │   ├── Site-logo.png
+│   │   │   ├── Sparkpowder.png
+│   │   │   ├── Steel_Ingot_Primitive_Plus.png
+│   │   │   ├── Stone.png
+│   │   │   ├── Sulfur_Scorched_Earth.png
+│   │   │   ├── Thatch.png
+│   │   │   ├── Wood.png
+│   │   │   ├── Woolly_Rhino_Horn.png
+│   │   │   ├── Wool.png
+│   │   │   └── Wreath.png
+│   │   ├── resources
+│   │   │   ├── Absorbent_Substrate.png
+│   │   │   ├── Alpha_Reaper_King_Barb_Aberration.png
+│   │   │   ├── Ammonite_Bile.png
+│   │   │   ├── AnglerGel.png
+│   │   │   ├── Argentavis_Talon.png
+│   │   │   ├── Basilosaurus_Blubber.png
+│   │   │   ├── Beeswax_Primitive_Plus.png
+│   │   │   ├── Bio_Toxin.png
+│   │   │   ├── Black_Pearl.png
+│   │   │   ├── Blue_Gem_Aberration.png
+│   │   │   ├── Bread_Dough_Primitive_Plus.png
+│   │   │   ├── Brick_Primitive_Plus.png
+│   │   │   ├── Cactus_Sap_Scorched_Earth.png
+│   │   │   ├── Cane_Sugar_Primitive_Plus.png
+│   │   │   ├── Carbon_Primitive_Plus.png
+│   │   │   ├── Cementing_Paste.png
+│   │   │   ├── Charcoal.png
+│   │   │   ├── Chitin.png
+│   │   │   ├── Clay_Primitive_Plus.png
+│   │   │   ├── Clay_Scorched_Earth.png
+│   │   │   ├── Claystone_Primitive_Plus.png
+│   │   │   ├── Coal_Primitive_Plus.png
+│   │   │   ├── Congealed_Gas_Ball_Aberration.png
+│   │   │   ├── Corrupted_Nodule_Extinction.png
+│   │   │   ├── Crystal.png
+│   │   │   ├── Cup_of_Malt_Primitive_Plus.png
+│   │   │   ├── Deathworm_Horn_Scorched_Earth.png
+│   │   │   ├── Dry_Firewood_Primitive_Plus.png
+│   │   │   ├── Electronics.png
+│   │   │   ├── Element_Dust.png
+│   │   │   ├── Element.png
+│   │   │   ├── Element_Shard.png
+│   │   │   ├── Feathers_Primitive_Plus.png
+│   │   │   ├── Fiber.png
+│   │   │   ├── Flint.png
+│   │   │   ├── Fresh_Cement_Primitive_Plus.png
+│   │   │   ├── Fresh_Fat_Primitive_Plus.png
+│   │   │   ├── Fresh_Firewood_Primitive_Plus.png
+│   │   │   ├── Fungal_Wood_Aberration.png
+│   │   │   ├── Gacha_Crystal_Extinction.png
+│   │   │   ├── Gasbags_bladder_Extinction.png
+│   │   │   ├── Gasoline.png
+│   │   │   ├── Giant_Bee_Honey.png
+│   │   │   ├── Glass_Primitive_Plus.png
+│   │   │   ├── Green_Gem_Aberration.png
+│   │   │   ├── Gunpowder.png
+│   │   │   ├── Hide.png
+│   │   │   ├── Human_Hair.png
+│   │   │   ├── Keratin.png
+│   │   │   ├── Leather_Primitive_Plus.png
+│   │   │   ├── Leech_Blood.png
+│   │   │   ├── Limestone_Primitive_Plus.png
+│   │   │   ├── Lumber_Primitive_Plus.png
+│   │   │   ├── Metal_Ingot.png
+│   │   │   ├── Metal.png
+│   │   │   ├── Mistletoe.png
+│   │   │   ├── Natural_Yeast_Primitive_Plus.png
+│   │   │   ├── Obsidian.png
+│   │   │   ├── Oil.png
+│   │   │   ├── Organic_Oil_Primitive_Plus.png
+│   │   │   ├── Organic_Polymer.png
+│   │   │   ├── Pelt.png
+│   │   │   ├── Polymer.png
+│   │   │   ├── Preserving_Salt_Scorched_Earth.png
+│   │   │   ├── Primal_Crystal_Crystal_Isles.png
+│   │   │   ├── Primitive_Plus_Icon.png
+│   │   │   ├── Propellant_Scorched_Earth.png
+│   │   │   ├── Raw_Salt_Scorched_Earth.png
+│   │   │   ├── Red_Crystalized_Sap_Extinction.png
+│   │   │   ├── Red_Gem_Aberration.png
+│   │   │   ├── Sack_of_Flour_Primitive_Plus.png
+│   │   │   ├── Sand_Scorched_Earth.png
+│   │   │   ├── Sap.png
+│   │   │   ├── Scrap_Metal_Ingot.png
+│   │   │   ├── Scrap_Metal.png
+│   │   │   ├── Shell_Fragment_Genesis_Part_1.png
+│   │   │   ├── Silica_Pearls.png
+│   │   │   ├── Silk_Scorched_Earth.png
+│   │   │   ├── Site-logo.png
+│   │   │   ├── Sparkpowder.png
+│   │   │   ├── Steel_Ingot_Primitive_Plus.png
+│   │   │   ├── Stone.png
+│   │   │   ├── Sulfur_Scorched_Earth.png
+│   │   │   ├── Thatch.png
+│   │   │   ├── Wood.png
+│   │   │   ├── Woolly_Rhino_Horn.png
+│   │   │   ├── Wool.png
+│   │   │   └── Wreath.png
+│   │   └── structures
+│   ├── util
+│   │   ├── all_items.html
+│   │   ├── comsumable_icons
+│   │   │   ├── Aggeravic_Mushroom_%28Aberration%29.png
+│   │   │   ├── Allosaurus_Egg.png
+│   │   │   ├── Amarberry.png
+│   │   │   ├── Amarberry_Seed.png
+│   │   │   ├── Ankylo_Egg.png
+│   │   │   ├── Aquatic_Mushroom_%28Aberration%29.png
+│   │   │   ├── Archaeopteryx_Egg.png
+│   │   │   ├── Argentavis_Egg.png
+│   │   │   ├── Ascerbic_Mushroom_%28Aberration%29.png
+│   │   │   ├── Auric_Mushroom_%28Aberration%29.png
+│   │   │   ├── Azulberry.png
+│   │   │   ├── Azulberry_Seed.png
+│   │   │   ├── Baked_Bread_Loaf_%28Primitive_Plus%29.png
+│   │   │   ├── Barley_Seed_%28Primitive_Plus%29.png
+│   │   │   ├── Baryonyx_Egg.png
+│   │   │   ├── Basic_Kibble.png
+│   │   │   ├── Battle_Tartare.png
+│   │   │   ├── Beer_Liquid.png
+│   │   │   ├── Berries.png
+│   │   │   ├── Bio_Toxin.png
+│   │   │   ├── Birthday_Cake.png
+│   │   │   ├── Biscuit_%28Primitive_Plus%29.png
+│   │   │   ├── Bloodstalker_Egg_%28Genesis_Part_1%29.png
+│   │   │   ├── Broth_%28Primitive_Plus%29.png
+│   │   │   ├── Broth_of_Enlightenment.png
+│   │   │   ├── Bug_Repellant.png
+│   │   │   ├── Cactus_Broth_%28Scorched_Earth%29.png
+│   │   │   ├── Cactus_Sap_%28Scorched_Earth%29.png
+│   │   │   ├── Cake_Batter_%28Primitive_Plus%29.png
+│   │   │   ├── Camelsaurus_Egg_%28Scorched_Earth%29.png
+│   │   │   ├── Carno_Egg.png
+│   │   │   ├── Cashew_%28Primitive_Plus%29.png
+│   │   │   ├── Cashew_Milk_%28Primitive_Plus%29.png
+│   │   │   ├── Cigarette_%28Primitive_Plus%29.png
+│   │   │   ├── Citronal.png
+│   │   │   ├── Citronal_Seed.png
+│   │   │   ├── Coffee_Seed_%28Primitive_Plus%29.png
+│   │   │   ├── Compy_Egg.png
+│   │   │   ├── Cooked_Bacon_%28Primitive_Plus%29.png
+│   │   │   ├── Cooked_Fish_Meat.png
+│   │   │   ├── Cooked_Lamb_Chop.png
+│   │   │   ├── Cooked_Meat_Jerky.png
+│   │   │   ├── Cooked_Meat.png
+│   │   │   ├── Cooked_Prime_Fish_Meat.png
+│   │   │   ├── Cooked_Prime_Meat.png
+│   │   │   ├── Corn_Starch_%28Primitive_Plus%29.png
+│   │   │   ├── Corrupted_Nodule_%28Extinction%29.png
+│   │   │   ├── Cup_of_Coffee_%28Primitive_Plus%29.png
+│   │   │   ├── Cup_of_Tea_%28Primitive_Plus%29.png
+│   │   │   ├── Cured_Bacon_%28Primitive_Plus%29.png
+│   │   │   ├── Custom_Consumable.png
+│   │   │   ├── Deathworm_Horn_%28Scorched_Earth%29.png
+│   │   │   ├── Deinonychus_Egg_%28Valguero%29.png
+│   │   │   ├── Dilo_Egg.png
+│   │   │   ├── Dimetrodon_Egg.png
+│   │   │   ├── Dimorph_Egg.png
+│   │   │   ├── Diplo_Egg.png
+│   │   │   ├── Dodo_Egg.png
+│   │   │   ├── Dried_Barley_%28Primitive_Plus%29.png
+│   │   │   ├── Dried_Rice_%28Primitive_Plus%29.png
+│   │   │   ├── Dried_Tobacco_%28Primitive_Plus%29.png
+│   │   │   ├── Eggs.png
+│   │   │   ├── Enduro_Stew.png
+│   │   │   ├── Exceptional_Kibble.png
+│   │   │   ├── Extraordinary_Kibble.png
+│   │   │   ├── Featherlight_Egg_%28Aberration%29.png
+│   │   │   ├── Feces.png
+│   │   │   ├── Festive_Dino_Candy_%28Easter%29.png
+│   │   │   ├── Festive_Dino_Candy.png
+│   │   │   ├── Focal_Chili.png
+│   │   │   ├── Food.png
+│   │   │   ├── Fresh_Bacon_%28Primitive_Plus%29.png
+│   │   │   ├── Fresh_Barley_%28Primitive_Plus%29.png
+│   │   │   ├── Fresh_Coffee_Fruit_%28Primitive_Plus%29.png
+│   │   │   ├── Fresh_Rice_%28Primitive_Plus%29.png
+│   │   │   ├── Fresh_Sorghum_%28Primitive_Plus%29.png
+│   │   │   ├── Fresh_Spinach_%28Primitive_Plus%29.png
+│   │   │   ├── Fresh_Sugar_Plant_%28Primitive_Plus%29.png
+│   │   │   ├── Fresh_Tea_Leaves_%28Primitive_Plus%29.png
+│   │   │   ├── Fresh_Tobacco_%28Primitive_Plus%29.png
+│   │   │   ├── Fresh_Wheat_%28Primitive_Plus%29.png
+│   │   │   ├── Gallimimus_Egg.png
+│   │   │   ├── Giant_Bee_Honey.png
+│   │   │   ├── Giganotosaurus_Egg.png
+│   │   │   ├── Glowtail_Egg_%28Aberration%29.png
+│   │   │   ├── Golden_Hesperornis_Egg.png
+│   │   │   ├── Grapes_%28Primitive_Plus%29.png
+│   │   │   ├── Hesperornis_Egg.png
+│   │   │   ├── Human_Feces.png
+│   │   │   ├── Jam_of_Amarberry_%28Primitive_Plus%29.png
+│   │   │   ├── Jam_of_Azulberry_%28Primitive_Plus%29.png
+│   │   │   ├── Jam_of_Mejoberry_%28Primitive_Plus%29.png
+│   │   │   ├── Jam_of_Tintoberry_%28Primitive_Plus%29.png
+│   │   │   ├── Kairuku_Egg.png
+│   │   │   ├── Kaprosuchus_Egg.png
+│   │   │   ├── Kibble.png
+│   │   │   ├── Lazarus_Chowder.png
+│   │   │   ├── Lesser_Antidote.png
+│   │   │   ├── Lettuce_%28Primitive_Plus%29.png
+│   │   │   ├── Lettuce_Seed_%28Primitive_Plus%29.png
+│   │   │   ├── Logo_Mobile.svg
+│   │   │   ├── Longrass.png
+│   │   │   ├── Longrass_Seed.png
+│   │   │   ├── Medical_Brew.png
+│   │   │   ├── Megalosaurus_Egg.png
+│   │   │   ├── Mejoberry.png
+│   │   │   ├── Mejoberry_Seed.png
+│   │   │   ├── Microraptor_Egg.png
+│   │   │   ├── Mindwipe_Tonic.png
+│   │   │   ├── Mushroom_Brew_%28Aberration%29.png
+│   │   │   ├── Nameless_Venom_%28Aberration%29.png
+│   │   │   ├── Narcoberry.png
+│   │   │   ├── Narcoberry_Seed.png
+│   │   │   ├── Narcotic.png
+│   │   │   ├── Nirvana_Tonic_%28Mobile%29.png
+│   │   │   ├── Note.png
+│   │   │   ├── Organic_Polymer.png
+│   │   │   ├── Oviraptor_Egg.png
+│   │   │   ├── Pachycephalosaurus_Egg.png
+│   │   │   ├── Pancake_Batter_%28Primitive_Plus%29.png
+│   │   │   ├── Parasaur_Egg.png
+│   │   │   ├── Pegomastax_Egg.png
+│   │   │   ├── Plant_Species_X_Seed.png
+│   │   │   ├── Prime_Meat_Jerky.png
+│   │   │   ├── Pteranodon_Egg.png
+│   │   │   ├── Raptor_Egg.png
+│   │   │   ├── Rare_Flower.png
+│   │   │   ├── Rare_Mushroom.png
+│   │   │   ├── Raw_Fish_Meat.png
+│   │   │   ├── Raw_Meat.png
+│   │   │   ├── Raw_Mutton.png
+│   │   │   ├── Raw_Prime_Fish_Meat.png
+│   │   │   ├── Raw_Prime_Meat.png
+│   │   │   ├── Reaper_Pheromone_Gland_%28Aberration%29.png
+│   │   │   ├── Re-Fertilizer.png
+│   │   │   ├── Regular_Kibble.png
+│   │   │   ├── Rockarrot.png
+│   │   │   ├── Rockarrot_Seed.png
+│   │   │   ├── Rock_Drake_Egg_%28Aberration%29.png
+│   │   │   ├── Rockwell_Recipes-_Battle_Tartare.png
+│   │   │   ├── Rockwell_Recipes-_Enduro_Stew.png
+│   │   │   ├── Rockwell_Recipes-_Mindwipe_Tonic.png
+│   │   │   ├── Savoroot.png
+│   │   │   ├── Savoroot_Seed.png
+│   │   │   ├── Simple_Kibble.png
+│   │   │   ├── Sky_Coloring.png
+│   │   │   ├── Snow_Owl_Pellet_%28Extinction%29.png
+│   │   │   ├── Soap.png
+│   │   │   ├── Sorghum_Seed_%28Primitive_Plus%29.png
+│   │   │   ├── Soybean_%28Primitive_Plus%29.png
+│   │   │   ├── Soybean_Seed_%28Primitive_Plus%29.png
+│   │   │   ├── Spinach_Seed_%28Primitive_Plus%29.png
+│   │   │   ├── Spoiled_Meat.png
+│   │   │   ├── Stamina.png
+│   │   │   ├── Stego_Egg.png
+│   │   │   ├── Stimberry.png
+│   │   │   ├── Stimberry_Seed.png
+│   │   │   ├── Stimulant.png
+│   │   │   ├── Sugarcane_Seed_%28Primitive_Plus%29.png
+│   │   │   ├── Superior_Kibble.png
+│   │   │   ├── Sweet_Vegetable_Cake.png
+│   │   │   ├── Tek_Parasaur_Egg.png
+│   │   │   ├── Tek_Raptor_Egg.png
+│   │   │   ├── Thorny_Dragon_Egg_%28Scorched_Earth%29.png
+│   │   │   ├── Tintoberry.png
+│   │   │   ├── Tintoberry_Seed.png
+│   │   │   ├── Tobacco_Seed_%28Primitive_Plus%29.png
+│   │   │   ├── Torpidity.png
+│   │   │   ├── Trike_Egg.png
+│   │   │   ├── Turtle_Egg.png
+│   │   │   ├── Valentines_Dino_Candy.png
+│   │   │   ├── Vulture_Egg_%28Scorched_Earth%29.png
+│   │   │   ├── Water_Jar.png
+│   │   │   ├── Water.png
+│   │   │   ├── Waterskin_%28Empty%29.png
+│   │   │   └── Wyvern_Milk_%28Scorched_Earth%29.png
+│   │   ├── debug_parsed.html
+│   │   ├── img
+│   │   │   └── no-photo.png
+│   │   ├── import_items.sql
+│   │   ├── import_resources.sql
+│   │   ├── items_structure_errors.log
+│   │   ├── items_structure.html
+│   │   ├── items_structure.sql
+│   │   ├── items_table.html
+│   │   ├── parce_mwe_popup.php
+│   │   ├── parse_icon_extended.php
+│   │   ├── parse_icons.php
+│   │   ├── resource2_icons
+│   │   │   ├── Compost_Bin.png
+│   │   │   ├── Dung_Beetle.png
+│   │   │   ├── Feces.png
+│   │   │   ├── Fertilizer.png
+│   │   │   ├── Human_Feces.png
+│   │   │   ├── Medium_Crop_Plot.png
+│   │   │   ├── Metal_Irrigation_Pipe_-_Tap.png
+│   │   │   ├── Oil.png
+│   │   │   ├── Phiomia.png
+│   │   │   ├── Plant_Species_X.png
+│   │   │   ├── Rockarrot_Seed.png
+│   │   │   ├── Snow_Owl_Pellet_%28Extinction%29.png
+│   │   │   ├── Stone_Irrigation_Pipe_-_Tap.png
+│   │   │   ├── Thatch.png
+│   │   │   └── Toilet.png
+│   │   ├── resource_icons
+│   │   │   ├── Absorbent_Substrate.png
+│   │   │   ├── Alpha_Reaper_King_Barb_%28Aberration%29.png
+│   │   │   ├── Ammonite_Bile.png
+│   │   │   ├── AnglerGel.png
+│   │   │   ├── Argentavis_Talon.png
+│   │   │   ├── Basilosaurus_Blubber.png
+│   │   │   ├── Beeswax_%28Primitive_Plus%29.png
+│   │   │   ├── Bio_Toxin.png
+│   │   │   ├── Black_Pearl.png
+│   │   │   ├── Blue_Gem_%28Aberration%29.png
+│   │   │   ├── Bread_Dough_%28Primitive_Plus%29.png
+│   │   │   ├── Brick_%28Primitive_Plus%29.png
+│   │   │   ├── Cactus_Sap_%28Scorched_Earth%29.png
+│   │   │   ├── Cane_Sugar_%28Primitive_Plus%29.png
+│   │   │   ├── Carbon_%28Primitive_Plus%29.png
+│   │   │   ├── Cementing_Paste.png
+│   │   │   ├── Charcoal.png
+│   │   │   ├── Check_mark.svg
+│   │   │   ├── Chitin.png
+│   │   │   ├── Clay_%28Primitive_Plus%29.png
+│   │   │   ├── Clay_%28Scorched_Earth%29.png
+│   │   │   ├── Claystone_%28Primitive_Plus%29.png
+│   │   │   ├── Coal_%28Primitive_Plus%29.png
+│   │   │   ├── Congealed_Gas_Ball_%28Aberration%29.png
+│   │   │   ├── Corrupted_Nodule_%28Extinction%29.png
+│   │   │   ├── Crystal.png
+│   │   │   ├── Cup_of_Malt_%28Primitive_Plus%29.png
+│   │   │   ├── Deathworm_Horn_%28Scorched_Earth%29.png
+│   │   │   ├── Dry_Firewood_%28Primitive_Plus%29.png
+│   │   │   ├── Electronics.png
+│   │   │   ├── Element_Dust.png
+│   │   │   ├── Element.png
+│   │   │   ├── Element_Shard.png
+│   │   │   ├── Feathers_%28Primitive_Plus%29.png
+│   │   │   ├── Fiber.png
+│   │   │   ├── Flint.png
+│   │   │   ├── Fresh_Cement_%28Primitive_Plus%29.png
+│   │   │   ├── Fresh_Fat_%28Primitive_Plus%29.png
+│   │   │   ├── Fresh_Firewood_%28Primitive_Plus%29.png
+│   │   │   ├── Fungal_Wood_%28Aberration%29.png
+│   │   │   ├── Gacha_Crystal_%28Extinction%29.png
+│   │   │   ├── Gasbags_bladder_%28Extinction%29.png
+│   │   │   ├── Gasoline.png
+│   │   │   ├── Giant_Bee_Honey.png
+│   │   │   ├── Glass_%28Primitive_Plus%29.png
+│   │   │   ├── Green_Gem_%28Aberration%29.png
+│   │   │   ├── Gunpowder.png
+│   │   │   ├── Hide.png
+│   │   │   ├── Human_Hair.png
+│   │   │   ├── Keratin.png
+│   │   │   ├── Leather_%28Primitive_Plus%29.png
+│   │   │   ├── Leech_Blood.png
+│   │   │   ├── Limestone_%28Primitive_Plus%29.png
+│   │   │   ├── Lumber_%28Primitive_Plus%29.png
+│   │   │   ├── Metal_Ingot.png
+│   │   │   ├── Metal.png
+│   │   │   ├── Mistletoe.png
+│   │   │   ├── Natural_Yeast_%28Primitive_Plus%29.png
+│   │   │   ├── Obsidian.png
+│   │   │   ├── Oil.png
+│   │   │   ├── Organic_Oil_%28Primitive_Plus%29.png
+│   │   │   ├── Organic_Polymer.png
+│   │   │   ├── Pelt.png
+│   │   │   ├── Polymer.png
+│   │   │   ├── Preserving_Salt_%28Scorched_Earth%29.png
+│   │   │   ├── Primal_Crystal_%28Crystal_Isles%29.png
+│   │   │   ├── Primitive_Plus_Icon.png
+│   │   │   ├── Propellant_%28Scorched_Earth%29.png
+│   │   │   ├── Raw_Salt_%28Scorched_Earth%29.png
+│   │   │   ├── Red_Crystalized_Sap_%28Extinction%29.png
+│   │   │   ├── Red_Gem_%28Aberration%29.png
+│   │   │   ├── Sack_of_Flour_%28Primitive_Plus%29.png
+│   │   │   ├── Sand_%28Scorched_Earth%29.png
+│   │   │   ├── Sap.png
+│   │   │   ├── Scrap_Metal_Ingot.png
+│   │   │   ├── Scrap_Metal.png
+│   │   │   ├── Shell_Fragment_%28Genesis_Part_1%29.png
+│   │   │   ├── Silica_Pearls.png
+│   │   │   ├── Silk_%28Scorched_Earth%29.png
+│   │   │   ├── Site-logo.png
+│   │   │   ├── Sparkpowder.png
+│   │   │   ├── Steel_Ingot_%28Primitive_Plus%29.png
+│   │   │   ├── Stone.png
+│   │   │   ├── Sulfur_%28Scorched_Earth%29.png
+│   │   │   ├── Thatch.png
+│   │   │   ├── Wood.png
+│   │   │   ├── Woolly_Rhino_Horn.png
+│   │   │   ├── Wool.png
+│   │   │   ├── Wreath.png
+│   │   │   └── X_mark.svg
+│   │   ├── resource_large
+│   │   ├── resources_table.html
+│   │   ├── shirt_icons
+│   │   │   ├── Allosaurus_Saddle.png
+│   │   │   ├── Ankylo_Saddle.png
+│   │   │   ├── Araneo_Saddle.png
+│   │   │   ├── Argentavis_Saddle.png
+│   │   │   ├── Arthropluera_Saddle.png
+│   │   │   ├── Baryonyx_Saddle.png
+│   │   │   ├── Bronto_Saddle.png
+│   │   │   ├── Carbonemys_Saddle.png
+│   │   │   ├── Castoroides_Saddle.png
+│   │   │   ├── Chitin_Boots.png
+│   │   │   ├── Chitin_Chestpiece.png
+│   │   │   ├── Chitin_Gauntlets.png
+│   │   │   ├── Chitin_Helmet.png
+│   │   │   ├── Chitin_Leggings.png
+│   │   │   ├── Cloth_Boots.png
+│   │   │   ├── Cloth_Gloves.png
+│   │   │   ├── Cloth_Hat.png
+│   │   │   ├── Cloth_Pants.png
+│   │   │   ├── Cloth_Shirt.png
+│   │   │   ├── Dead_Island.jpg
+│   │   │   ├── Deinonychus_Saddle.png
+│   │   │   ├── Desert_Goggles_and_Hat_%28Scorched_Earth%29.png
+│   │   │   ├── Doedicurus_Saddle.png
+│   │   │   ├── Dunkleosteus_Saddle.png
+│   │   │   ├── Fiber.png
+│   │   │   ├── Flak_Boots.png
+│   │   │   ├── Flak_Chestpiece.png
+│   │   │   ├── Flak_Gauntlets.png
+│   │   │   ├── Flak_Helmet.png
+│   │   │   ├── Flak_Leggings.png
+│   │   │   ├── Fur_Boots.png
+│   │   │   ├── Fur_Cap.png
+│   │   │   ├── Fur_Chestpiece.png
+│   │   │   ├── Fur_Gauntlets.png
+│   │   │   ├── Fur_Leggings.png
+│   │   │   ├── Gasbags_Saddle_%28Extinction%29.png
+│   │   │   ├── Gas_Mask.png
+│   │   │   ├── Ghillie_Boots.png
+│   │   │   ├── Ghillie_Chestpiece.png
+│   │   │   ├── Ghillie_Gauntlets.png
+│   │   │   ├── Ghillie_Leggings.png
+│   │   │   ├── Ghillie_Mask.png
+│   │   │   ├── Hazard_Suit_Hat_%28Aberration%29.png
+│   │   │   ├── Hide_Boots.png
+│   │   │   ├── Hide_Gloves.png
+│   │   │   ├── Hide_Hat.png
+│   │   │   ├── Hide_Pants.png
+│   │   │   ├── Hide_Shirt.png
+│   │   │   ├── Ichthyosaurus_Saddle.png
+│   │   │   ├── Kaprosuchus_Saddle.png
+│   │   │   ├── Large_Storage_Box.png
+│   │   │   ├── Managarmr_Saddle_%28Extinction%29.png
+│   │   │   ├── Megalosaurus_Saddle.png
+│   │   │   ├── Megatherium_Saddle.png
+│   │   │   ├── Night_Vision_Goggles.png
+│   │   │   ├── Pachy_Saddle.png
+│   │   │   ├── Parasaur_Saddle.png
+│   │   │   ├── Phiomia_Saddle.png
+│   │   │   ├── Polymer%2C_Organic_Polymer%2C_or_Corrupted_Nodule.png
+│   │   │   ├── Procoptodon_Saddle.png
+│   │   │   ├── Quetz_Platform_Saddle.png
+│   │   │   ├── Rex_Saddle.png
+│   │   │   ├── Riot_Boots.png
+│   │   │   ├── Riot_Chestpiece.png
+│   │   │   ├── Riot_Gauntlets.png
+│   │   │   ├── Riot_Helmet.png
+│   │   │   ├── Riot_Leggings.png
+│   │   │   ├── SCUBA_Flippers.png
+│   │   │   ├── SCUBA_Leggings.png
+│   │   │   ├── SCUBA_Mask.png
+│   │   │   ├── SCUBA_Tank.png
+│   │   │   ├── Snow_Owl_Saddle_%28Extinction%29.png
+│   │   │   ├── Tek_Chestpiece.png
+│   │   │   ├── Tek_Helmet.png
+│   │   │   ├── Tek_Leggings.png
+│   │   │   ├── Tek_Replicator.png
+│   │   │   ├── Therizinosaurus_Saddle.png
+│   │   │   ├── Trike_Saddle.png
+│   │   │   ├── Vault.png
+│   │   │   └── Velonasaur_Saddle_%28Extinction%29.png
+│   │   ├── sql_parce_extended.php
+│   │   ├── sql_parce_structure_only.php
+│   │   ├── sql_parse_local.php
+│   │   ├── sql_parse.php
+│   │   ├── structure_icons
+│   │   │   ├── Beer_Barrel.png
+│   │   │   ├── Bunny_Egg.png
+│   │   │   ├── Campfire.png
+│   │   │   ├── Chemistry_Bench.png
+│   │   │   ├── Compost_Bin.png
+│   │   │   ├── Cooking_Pot.png
+│   │   │   ├── Deinonychus_Nest_%28Valguero%29.png
+│   │   │   ├── Delivery_Crate_%28Extinction%29.png
+│   │   │   ├── Dino_Leash_%28Extinction%29.png
+│   │   │   ├── Dinosaur_Gate.png
+│   │   │   ├── Dinosaur_Gateway.png
+│   │   │   ├── Fabricator.png
+│   │   │   ├── Feeding_Trough.png
+│   │   │   ├── Fiber.png
+│   │   │   ├── Flag.png
+│   │   │   ├── Flexible_Electrical_Cable.png
+│   │   │   ├── Giant_Beaver_Dam.png
+│   │   │   ├── Giant_Metal_Hatchframe.png
+│   │   │   ├── Greenhouse_Ceiling.png
+│   │   │   ├── Greenhouse_Doorframe.png
+│   │   │   ├── Greenhouse_Door.png
+│   │   │   ├── Greenhouse_Roof.png
+│   │   │   ├── Greenhouse_Wall.png
+│   │   │   ├── Hide.png
+│   │   │   ├── Hide_Sleeping_Bag.png
+│   │   │   ├── Industrial_Grinder.png
+│   │   │   ├── King_Titan_Flag_%28Extinction%29.png
+│   │   │   ├── King_Titan_Flag_%28Mecha%29_%28Extinction%29.png
+│   │   │   ├── Large_Crop_Plot.png
+│   │   │   ├── Large_Storage_Box.png
+│   │   │   ├── Metal_Ceiling.png
+│   │   │   ├── Metal_Foundation.png
+│   │   │   ├── Metal_Hatchframe.png
+│   │   │   ├── Metal_Ingot_or_Scrap_Metal_Ingot.png
+│   │   │   ├── Metal_Irrigation_Pipe_-_Flexible.png
+│   │   │   ├── Metal_Irrigation_Pipe_-_Tap.png
+│   │   │   ├── Metal_Ladder.png
+│   │   │   ├── Metal_Pillar.png
+│   │   │   ├── Metal_Ramp.png
+│   │   │   ├── Metal_Spike_Wall.png
+│   │   │   ├── Metal_Staircase.png
+│   │   │   ├── Metal_Tree_Platform.png
+│   │   │   ├── Metal_Wall.png
+│   │   │   ├── Mortar_And_Pestle.png
+│   │   │   ├── Preserving_Bin.png
+│   │   │   ├── Refining_Forge.png
+│   │   │   ├── Refrigerator.png
+│   │   │   ├── Rope_Ladder.png
+│   │   │   ├── Simple_Bed.png
+│   │   │   ├── Single_Panel_Flag.png
+│   │   │   ├── Sloped_Metal_Roof.png
+│   │   │   ├── Sloped_Tek_Roof.png
+│   │   │   ├── Sloped_Tek_Wall_Left.png
+│   │   │   ├── Sloped_Thatch_Roof.png
+│   │   │   ├── Sloped_Thatch_Wall_Left.png
+│   │   │   ├── Sloped_Thatch_Wall_Right.png
+│   │   │   ├── Sloped_Wooden_Roof.png
+│   │   │   ├── Sloped_Wood_Wall_Left.png
+│   │   │   ├── Sloped_Wood_Wall_Right.png
+│   │   │   ├── Small_Crop_Plot.png
+│   │   │   ├── Smithy.png
+│   │   │   ├── Standing_Torch.png
+│   │   │   ├── Stone_Irrigation_Pipe_-_Flexible.png
+│   │   │   ├── Stone_Irrigation_Pipe_-_Tap.png
+│   │   │   ├── Stone_Railing.png
+│   │   │   ├── Stone_Staircase.png
+│   │   │   ├── Tek_Ceiling.png
+│   │   │   ├── Tek_Dedicated_Storage.png
+│   │   │   ├── Tek_Door.png
+│   │   │   ├── Tek_Fence_Foundation.png
+│   │   │   ├── Tek_Foundation.png
+│   │   │   ├── Tek_Generator.png
+│   │   │   ├── Tek_Hatchframe.png
+│   │   │   ├── Tek_Pillar.png
+│   │   │   ├── Tek_Railing.png
+│   │   │   ├── Tek_Ramp.png
+│   │   │   ├── Tek_Replicator.png
+│   │   │   ├── Tek_Teleporter.png
+│   │   │   ├── Tek_Wall.png
+│   │   │   ├── Tek_Windowframe.png
+│   │   │   ├── Tek_Window.png
+│   │   │   ├── Thatch_Ceiling.png
+│   │   │   ├── Thatch_Doorframe.png
+│   │   │   ├── Thatch_Door.png
+│   │   │   ├── Thatch_Foundation.png
+│   │   │   ├── Thatch.png
+│   │   │   ├── Thatch_Wall.png
+│   │   │   ├── Training_Dummy.png
+│   │   │   ├── Tree_Sap_Tap.png
+│   │   │   ├── Trophy_Wall-Mount.png
+│   │   │   ├── Vault.png
+│   │   │   ├── Wardrums.png
+│   │   │   ├── War_Map.png
+│   │   │   ├── Wooden_Bench.png
+│   │   │   ├── Wooden_Billboard.png
+│   │   │   ├── Wooden_Cage.png
+│   │   │   ├── Wooden_Catwalk.png
+│   │   │   ├── Wooden_Ceiling.png
+│   │   │   ├── Wooden_Chair.png
+│   │   │   ├── Wooden_Doorframe.png
+│   │   │   ├── Wooden_Door.png
+│   │   │   ├── Wooden_Fence_Foundation.png
+│   │   │   ├── Wooden_Foundation.png
+│   │   │   ├── Wooden_Hatchframe.png
+│   │   │   ├── Wooden_Ladder.png
+│   │   │   ├── Wooden_Pillar.png
+│   │   │   ├── Wooden_Raft.png
+│   │   │   ├── Wooden_Railing.png
+│   │   │   ├── Wooden_Ramp.png
+│   │   │   ├── Wooden_Sign.png
+│   │   │   ├── Wooden_Spike_Wall.png
+│   │   │   ├── Wooden_Staircase.png
+│   │   │   ├── Wooden_Table.png
+│   │   │   ├── Wooden_Trapdoor.png
+│   │   │   ├── Wooden_Tree_Platform.png
+│   │   │   ├── Wooden_Wall.png
+│   │   │   ├── Wooden_Wall_Sign.png
+│   │   │   ├── Wooden_Windowframe.png
+│   │   │   ├── Wooden_Window.png
+│   │   │   └── Wood_or_Fungal_Wood.png
+│   │   └── weapon_icons
+│   │       ├── Advanced_Bullet.png
+│   │       ├── Advanced_Rifle_Bullet.png
+│   │       ├── Advanced_Sniper_Bullet.png
+│   │       ├── AnglerGel.png
+│   │       ├── Assault_Rifle.png
+│   │       ├── Auto_Turret.png
+│   │       ├── Ballista_Turret.png
+│   │       ├── Bear_Trap.png
+│   │       ├── Bola.png
+│   │       ├── Boomerang_%28Scorched_Earth%29.png
+│   │       ├── Bow.png
+│   │       ├── C4_Charge.png
+│   │       ├── C4_Remote_Detonator.png
+│   │       ├── Cannon_Ball.png
+│   │       ├── Cannon.png
+│   │       ├── Catapult_Turret.png
+│   │       ├── Chainsaw_%28Scorched_Earth%29.png
+│   │       ├── Charge_Battery_%28Aberration%29.png
+│   │       ├── Charge_Lantern_%28Aberration%29.png
+│   │       ├── Climbing_Pick_%28Aberration%29.png
+│   │       ├── Cluster_Grenade_%28Scorched_Earth%29.png
+│   │       ├── Compound_Bow.png
+│   │       ├── Congealed_Gas_Ball_%28Aberration%29.png
+│   │       ├── Crossbow.png
+│   │       ├── Cruise_Missile_%28Genesis_Part_1%29.png
+│   │       ├── Cryofridge.png
+│   │       ├── Cryopod.png
+│   │       ├── Crystal.png
+│   │       ├── Dilophosaur.png
+│   │       ├── Electric_Prod.png
+│   │       ├── Element_Dust.png
+│   │       ├── Element.png
+│   │       ├── Element_Shard.png
+│   │       ├── Fabricated_Pistol.png
+│   │       ├── Fabricated_Sniper_Rifle.png
+│   │       ├── Fabricator.png
+│   │       ├── Fertilizer.png
+│   │       ├── Fiber.png
+│   │       ├── Flame_Arrow_%28Scorched_Earth%29.png
+│   │       ├── Flamethrower_%28Scorched_Earth%29.png
+│   │       ├── Flamethrower_Ammo_%28Scorched_Earth%29.png
+│   │       ├── Flashlight_Attachment.png
+│   │       ├── Flint.png
+│   │       ├── Gasoline.png
+│   │       ├── Giganotosaurus.png
+│   │       ├── Glow_Stick_%28Aberration%29.png
+│   │       ├── Grappling_Hook.png
+│   │       ├── Grenade.png
+│   │       ├── Gunpowder.png
+│   │       ├── Harpoon_Launcher.png
+│   │       ├── Heavy_Auto_Turret.png
+│   │       ├── Hide.png
+│   │       ├── Holo-Scope_Attachment.png
+│   │       ├── Homing_Underwater_Mine.png
+│   │       ├── Human.png
+│   │       ├── Improvised_Explosive_Device.png
+│   │       ├── Kairuku.png
+│   │       ├── Large_Bear_Trap.png
+│   │       ├── Large_Crop_Plot.png
+│   │       ├── Laser_Attachment.png
+│   │       ├── Longneck_Rifle.png
+│   │       ├── Megalodon.png
+│   │       ├── Metal_Arrow.png
+│   │       ├── Metal_Hatchet.png
+│   │       ├── Metal_Ingot.png
+│   │       ├── Metal_Pick.png
+│   │       ├── Metal.png
+│   │       ├── Metal_Shield.png
+│   │       ├── Metal_Sickle.png
+│   │       ├── Minigun_Turret.png
+│   │       ├── Mosasaurus.png
+│   │       ├── Nameless.png
+│   │       ├── Oil_Jar_%28Scorched_Earth%29.png
+│   │       ├── Organic_Polymer.png
+│   │       ├── Pike.png
+│   │       ├── Plant_Species_X.png
+│   │       ├── Plant_Species_X_Seed.png
+│   │       ├── Plant_Species_Y_Seed_%28Scorched_Earth%29.png
+│   │       ├── Plant_Species_Y_Trap_%28Scorched_Earth%29.png
+│   │       ├── Plant_Species_Z_Fruit_%28Aberration%29.png
+│   │       ├── Plant_Species_Z_Seed_%28Aberration%29.png
+│   │       ├── Plesiosaur.png
+│   │       ├── Pliers_%28Aberration%29.png
+│   │       ├── Poison_Grenade.png
+│   │       ├── Polymer.png
+│   │       ├── Propellant_%28Scorched_Earth%29.png
+│   │       ├── Pump-Action_Shotgun.png
+│   │       ├── Raw_Meat.png
+│   │       ├── Reaper.png
+│   │       ├── Riot_Helmet.png
+│   │       ├── Riot_Shield.png
+│   │       ├── Rocket_Homing_Missile_%28Scorched_Earth%29.png
+│   │       ├── Rocket_Launcher.png
+│   │       ├── Rocket_Propelled_Grenade.png
+│   │       ├── Rocket_Turret.png
+│   │       ├── Scope_Attachment.png
+│   │       ├── Scorpion.png
+│   │       ├── Scout.png
+│   │       ├── Scout_Remote_%28Extinction%29.png
+│   │       ├── Shotgun.png
+│   │       ├── Silencer_Attachment.png
+│   │       ├── Simple_Bullet.png
+│   │       ├── Simple_Pistol.png
+│   │       ├── Simple_Rifle_Ammo.png
+│   │       ├── Simple_Shotgun_Ammo.png
+│   │       ├── Slingshot.png
+│   │       ├── Smithy.png
+│   │       ├── Smoke_Grenade.png
+│   │       ├── Spear_Bolt.png
+│   │       ├── Spear.png
+│   │       ├── Spider.png
+│   │       ├── Stone_Arrow.png
+│   │       ├── Stone_Hatchet.png
+│   │       ├── Stone_Pick.png
+│   │       ├── Stone.png
+│   │       ├── Sword.png
+│   │       ├── Tek_Claws_%28Genesis_Part_1%29.png
+│   │       ├── Tek_Gravity_Grenade_%28Extinction%29.png
+│   │       ├── Tek_Grenade_Launcher_%28Genesis_Part_1%29.png
+│   │       ├── Tek_Grenade.png
+│   │       ├── Tek_Railgun_%28Aberration%29.png
+│   │       ├── Tek_Replicator.png
+│   │       ├── Tek_Rifle.png
+│   │       ├── Tek_Shield_%28Ragnarok%29.png
+│   │       ├── Tek_Shoulder_Cannon_%28Genesis_Part_1%29.png
+│   │       ├── Tek_Sword_%28Ragnarok%29.png
+│   │       ├── Tek_Turret.png
+│   │       ├── Thatch.png
+│   │       ├── Titanoboa.png
+│   │       ├── Torch.png
+│   │       ├── Torpidity.png
+│   │       ├── Tranq_Arrow.png
+│   │       ├── Tranq_Spear_Bolt.png
+│   │       ├── Tranquilizer_Dart.png
+│   │       ├── Tripwire_Alarm_Trap.png
+│   │       ├── Tripwire_Narcotic_Trap.png
+│   │       ├── Water.png
+│   │       ├── Whip_%28Scorched_Earth%29.png
+│   │       ├── Wooden_Club.png
+│   │       ├── Wooden_Shield.png
+│   │       ├── Wood.png
+│   │       ├── XboxOne_X.png
+│   │       └── Zip-Line_Anchor_%28Aberration%29.png
+│   ├── wallet-tupup.php
+│   └── wrl
+│       └── ReclamASE.jpg
+├── README.md
+├── src
+│   ├── Config
+│   │   └── Config.php
+│   ├── Controller
+│   │   └── AuthController.php
+│   ├── Core
+│   │   ├── auth.php
+│   │   └── render.php
+│   ├── Model
+│   │   ├── Dino.php
+│   │   ├── Item.php
+│   │   └── User.php
+│   └── Service
+│       ├── Cart.php
+│       ├── DinoPriceCalculator.php
+│       ├── SessionActivity.php
+│       └── Wallet.php
+├── storage
+│   └── GeoLite2-Country.mmdb
+├── test-db.php
+├── tree.txt
+└── vendor
+    ├── autoload.php
+    ├── composer
+    │   ├── autoload_classmap.php
+    │   ├── autoload_files.php
+    │   ├── autoload_namespaces.php
+    │   ├── autoload_psr4.php
+    │   ├── autoload_real.php
+    │   ├── autoload_static.php
+    │   ├── ca-bundle
+    │   │   ├── composer.json
+    │   │   ├── LICENSE
+    │   │   ├── README.md
+    │   │   ├── res
+    │   │   │   └── cacert.pem
+    │   │   └── src
+    │   │       └── CaBundle.php
+    │   ├── ClassLoader.php
+    │   ├── installed.json
+    │   ├── installed.php
+    │   ├── InstalledVersions.php
+    │   ├── LICENSE
+    │   └── platform_check.php
+    ├── geoip2
+    │   └── geoip2
+    │       ├── CHANGELOG.md
+    │       ├── composer.json
+    │       ├── examples
+    │       │   └── benchmark.php
+    │       ├── LICENSE
+    │       ├── README.md
+    │       └── src
+    │           ├── Database
+    │           │   └── Reader.php
+    │           ├── Exception
+    │           │   ├── AddressNotFoundException.php
+    │           │   ├── AuthenticationException.php
+    │           │   ├── GeoIp2Exception.php
+    │           │   ├── HttpException.php
+    │           │   ├── InvalidRequestException.php
+    │           │   └── OutOfQueriesException.php
+    │           ├── Model
+    │           │   ├── AnonymousIp.php
+    │           │   ├── AnonymousPlus.php
+    │           │   ├── Asn.php
+    │           │   ├── City.php
+    │           │   ├── ConnectionType.php
+    │           │   ├── Country.php
+    │           │   ├── Domain.php
+    │           │   ├── Enterprise.php
+    │           │   ├── Insights.php
+    │           │   └── Isp.php
+    │           ├── ProviderInterface.php
+    │           ├── Record
+    │           │   ├── AbstractNamedRecord.php
+    │           │   ├── AbstractPlaceRecord.php
+    │           │   ├── City.php
+    │           │   ├── Continent.php
+    │           │   ├── Country.php
+    │           │   ├── Location.php
+    │           │   ├── MaxMind.php
+    │           │   ├── Postal.php
+    │           │   ├── RepresentedCountry.php
+    │           │   ├── Subdivision.php
+    │           │   └── Traits.php
+    │           ├── Util.php
+    │           └── WebService
+    │               └── Client.php
+    ├── graham-campbell
+    │   └── result-type
+    │       ├── composer.json
+    │       ├── LICENSE
+    │       └── src
+    │           ├── Error.php
+    │           ├── Result.php
+    │           └── Success.php
+    ├── maxmind
+    │   └── web-service-common
+    │       ├── CHANGELOG.md
+    │       ├── composer.json
+    │       ├── dev-bin
+    │       │   └── release.sh
+    │       ├── LICENSE
+    │       ├── phpstan.neon
+    │       ├── README.md
+    │       └── src
+    │           ├── Exception
+    │           │   ├── AuthenticationException.php
+    │           │   ├── HttpException.php
+    │           │   ├── InsufficientFundsException.php
+    │           │   ├── InvalidInputException.php
+    │           │   ├── InvalidRequestException.php
+    │           │   ├── IpAddressNotFoundException.php
+    │           │   ├── PermissionRequiredException.php
+    │           │   └── WebServiceException.php
+    │           └── WebService
+    │               ├── Client.php
+    │               └── Http
+    │                   ├── CurlRequest.php
+    │                   ├── RequestFactory.php
+    │                   └── Request.php
+    ├── maxmind-db
+    │   └── reader
+    │       ├── autoload.php
+    │       ├── CHANGELOG.md
+    │       ├── composer.json
+    │       ├── ext
+    │       │   ├── config.m4
+    │       │   ├── config.w32
+    │       │   ├── maxminddb.c
+    │       │   ├── php_maxminddb.h
+    │       │   └── tests
+    │       │       ├── 001-load.phpt
+    │       │       ├── 002-final.phpt
+    │       │       └── 003-open-basedir.phpt
+    │       ├── LICENSE
+    │       ├── package.xml
+    │       ├── README.md
+    │       └── src
+    │           └── MaxMind
+    │               └── Db
+    │                   ├── Reader
+    │                   │   ├── Decoder.php
+    │                   │   ├── InvalidDatabaseException.php
+    │                   │   ├── Metadata.php
+    │                   │   └── Util.php
+    │                   └── Reader.php
+    ├── phpoption
+    │   └── phpoption
+    │       ├── composer.json
+    │       ├── LICENSE
+    │       └── src
+    │           └── PhpOption
+    │               ├── LazyOption.php
+    │               ├── None.php
+    │               ├── Option.php
+    │               └── Some.php
+    ├── symfony
+    │   ├── polyfill-ctype
+    │   │   ├── bootstrap80.php
+    │   │   ├── bootstrap.php
+    │   │   ├── composer.json
+    │   │   ├── Ctype.php
+    │   │   ├── LICENSE
+    │   │   └── README.md
+    │   ├── polyfill-mbstring
+    │   │   ├── bootstrap80.php
+    │   │   ├── bootstrap.php
+    │   │   ├── composer.json
+    │   │   ├── LICENSE
+    │   │   ├── Mbstring.php
+    │   │   ├── README.md
+    │   │   └── Resources
+    │   │       └── unidata
+    │   │           ├── caseFolding.php
+    │   │           ├── lowerCase.php
+    │   │           ├── titleCaseRegexp.php
+    │   │           └── upperCase.php
+    │   └── polyfill-php80
+    │       ├── bootstrap.php
+    │       ├── composer.json
+    │       ├── LICENSE
+    │       ├── Php80.php
+    │       ├── PhpToken.php
+    │       ├── README.md
+    │       └── Resources
+    │           └── stubs
+    │               ├── Attribute.php
+    │               ├── PhpToken.php
+    │               ├── Stringable.php
+    │               ├── UnhandledMatchError.php
+    │               └── ValueError.php
+    └── vlucas
+        └── phpdotenv
+            ├── composer.json
+            ├── LICENSE
+            └── src
+                ├── Dotenv.php
+                ├── Exception
+                │   ├── ExceptionInterface.php
+                │   ├── InvalidEncodingException.php
+                │   ├── InvalidFileException.php
+                │   ├── InvalidPathException.php
+                │   └── ValidationException.php
+                ├── Loader
+                │   ├── LoaderInterface.php
+                │   ├── Loader.php
+                │   └── Resolver.php
+                ├── Parser
+                │   ├── EntryParser.php
+                │   ├── Entry.php
+                │   ├── Lexer.php
+                │   ├── Lines.php
+                │   ├── ParserInterface.php
+                │   ├── Parser.php
+                │   └── Value.php
+                ├── Repository
+                │   ├── Adapter
+                │   │   ├── AdapterInterface.php
+                │   │   ├── ApacheAdapter.php
+                │   │   ├── ArrayAdapter.php
+                │   │   ├── EnvConstAdapter.php
+                │   │   ├── GuardedWriter.php
+                │   │   ├── ImmutableWriter.php
+                │   │   ├── MultiReader.php
+                │   │   ├── MultiWriter.php
+                │   │   ├── PutenvAdapter.php
+                │   │   ├── ReaderInterface.php
+                │   │   ├── ReplacingWriter.php
+                │   │   ├── ServerConstAdapter.php
+                │   │   └── WriterInterface.php
+                │   ├── AdapterRepository.php
+                │   ├── RepositoryBuilder.php
+                │   └── RepositoryInterface.php
+                ├── Store
+                │   ├── File
+                │   │   ├── Paths.php
+                │   │   └── Reader.php
+                │   ├── FileStore.php
+                │   ├── StoreBuilder.php
+                │   ├── StoreInterface.php
+                │   └── StringStore.php
+                ├── Util
+                │   ├── Regex.php
+                │   └── Str.php
+                └── Validator.php
+
+84 directories, 1407 files

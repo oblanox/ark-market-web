@@ -41,4 +41,18 @@ class Wallet
 
         self::refresh($db, $steamId);
     }
+
+    public static function add(PDO $db, string $steamId, int $amount): void
+    {
+        if ($steamId === Config::ADMIN_STEAM_ID) {
+            return;
+        }
+
+        $stmt = $db->prepare("UPDATE ArkShopPlayers 
+        SET Points = Points + :amount 
+        WHERE SteamId = :steamId");
+        $stmt->execute(['amount' => $amount, 'steamId' => $steamId]);
+
+        self::refresh($db, $steamId);
+    }
 }
