@@ -1,0 +1,79 @@
+####################################
+# VS Code / Remote SSH
+####################################
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+.vscode-server/
+.vscode-server-insiders/
+.vscode-test/
+
+####################################
+# OS / editor junk
+####################################
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*.tmp
+*.log
+
+####################################
+# PHP / Composer
+####################################
+/vendor/
+composer.lock
+
+####################################
+# ENV / secrets
+####################################
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+
+####################################
+# Uploads / media (КРИТИЧНО)
+# Игнорируем ВСЕ картинки проекта
+####################################
+
+# Все изображения
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.ico
+
+# Конкретно твои каталоги с ассетами
+/public/upl/
+/public/util/comsumable_icons/
+/public/assets/
+/public/resources/
+/public/items/
+/public/creature/
+/public/structures/
+
+####################################
+# Временные / генерируемые файлы
+####################################
+.cache/
+tmp/
+build/
+dist/
+
+####################################
+# Архивы / дампы
+####################################
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.sql

@@ -10,7 +10,7 @@ $userModel = new User($pdo);
 
 $errors = [];
 $success = false;
-
+exit;
 // ...
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email    = trim($_POST['email'] ?? '');

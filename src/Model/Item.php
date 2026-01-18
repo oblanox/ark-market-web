@@ -49,9 +49,10 @@ class Item
      */
     public function create(array $data): bool
     {
+        $verifed = $this->verify($data);
         $stmt = $this->pdo->prepare("
-            INSERT INTO items (NameRU, NameEN, Pic, Price, ShortCode, Type, StackSize, Enable, Visible, HasQuality, DefaultQuality, Customizable, Note)
-            VALUES (:NameRU, :NameEN, :Pic, :Price, :ShortCode, :Type, :StackSize, :Enable, :Visible, :HasQuality, :DefaultQuality, :Customizable, :Note)
+            INSERT INTO items (NameRU, NameEN, Pic, Price, ShortCode, Type, StackSize, Enable, Visible, HasQuality, DefaultQuality, Customizable, Note, Code)
+            VALUES (:NameRU, :NameEN, :Pic, :Price, :ShortCode, :Type, :StackSize, :Enable, :Visible, :HasQuality, :DefaultQuality, :Customizable, :Note, :Code)
         ");
 
         return $stmt->execute([
@@ -62,12 +63,13 @@ class Item
             'ShortCode'     => $data['ShortCode'] ?? '',
             'Type'          => $data['Type'] ?? '',
             'StackSize'     => $data['StackSize'] ?? 1,
-            'Enable'        => !empty($data['Enable']),
-            'Visible'       => !empty($data['Visible']),
-            'HasQuality'    => !empty($data['HasQuality']),
-            'DefaultQuality' => $data['DefaultQuality'] ?? null,
-            'Customizable'  => !empty($data['Customizable']),
+            'Enable'        => $verifed['Enable'],
+            'Visible'       => $verifed['Visible'],
+            'HasQuality'    => $verifed['HasQuality'],
+            'DefaultQuality' => $verifed['DefaultQuality'] ?? null,
+            'Customizable'  => $verifed['Customizable'],
             'Note'          => $data['Note'] ?? null,
+            'Code'          => $data['Code'] ?? null,
         ]);
     }
 
@@ -76,6 +78,7 @@ class Item
      */
     public function update(int $id, array $data): bool
     {
+        $verifed = $this->verify($data);
         $stmt = $this->pdo->prepare("
             UPDATE items SET
                 NameRU = :NameRU,
@@ -90,7 +93,8 @@ class Item
                 HasQuality = :HasQuality,
                 DefaultQuality = :DefaultQuality,
                 Customizable = :Customizable,
-                Note = :Note
+                Note = :Note,
+                Code = :Code
             WHERE id = :id
         ");
 
@@ -103,12 +107,13 @@ class Item
             'ShortCode'     => $data['ShortCode'] ?? '',
             'Type'          => $data['Type'] ?? '',
             'StackSize'     => $data['StackSize'] ?? 1,
-            'Enable'        => !empty($data['Enable']),
-            'Visible'       => !empty($data['Visible']),
-            'HasQuality'    => !empty($data['HasQuality']),
-            'DefaultQuality' => $data['DefaultQuality'] ?? null,
-            'Customizable'  => !empty($data['Customizable']),
+            'Enable'        => $verifed['Enable'],
+            'Visible'       => $verifed['Visible'],
+            'HasQuality'    => $verifed['HasQuality'],
+            'DefaultQuality' => $verifed['DefaultQuality'] ?? null,
+            'Customizable'  => $verifed['Customizable'],
             'Note'          => $data['Note'] ?? null,
+            'Code'          => $data['Code'] ?? null,
         ]);
     }
 
@@ -119,5 +124,20 @@ class Item
     {
         $stmt = $this->pdo->prepare("DELETE FROM items WHERE id = :id");
         return $stmt->execute(['id' => $id]);
+    }
+
+    private function verify(array $data): array
+    {
+        $allowedQualities = ['Primitive', 'Ramshackle', 'Apprentice', 'Journeyman', 'Mastercraft', 'Ascendant'];
+
+        return [
+            'Enable'       => is_null($data['Enable']) ? 0 : $data['Enable'],
+            'Visible'      => is_null($data['Visible']) ? 0 : $data['Visible'],
+            'HasQuality'   => is_null($data['HasQuality']) ? 0 : $data['HasQuality'],
+            'Customizable' => is_null($data['Customizable']) ? 0 : $data['Customizable'],
+            'DefaultQuality' => in_array($data['DefaultQuality'] ?? null, $allowedQualities, true)
+                ? $data['DefaultQuality']
+                : null,
+        ];
     }
 }
