@@ -77,3 +77,4 @@ dist/
 *.tar.gz
 *.7z
 *.sql
+.env
